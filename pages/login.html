@@ -10,15 +10,16 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="style.css" />
-    <title>ASU Coffee Login</title>
+    <title>🚀Project3</title>
     <link rel="stylesheet" href="../styles/signin.css" />
   </head>
   <body>
     <header class="header p-3 position-absolute start-0 top-0 end-0">
       <div class="d-flex justify-content-between align-items-center">
         <a href="/" class="text-decoration-none text-white fs-5 fw-bold"
-          >ASUCoffeeSocial</a
+          >ASU Coffee Club</a
         >
 
         <div>
@@ -80,7 +81,7 @@
           <div class="row align-items-center">
             <div class="header-text mb-4">
               <h2>Hey there, Welcome Back</h2>
-              <p>We are happy to have you back.</p>
+              <p>We are so happy to have you back.</p>
             </div>
             <div class="input-group mb-3">
               <input
@@ -96,6 +97,33 @@
                 placeholder="Password"
               />
             </div>
+            <div class="btn-group">
+              <button
+                id="dropdownButton"
+                class="btn btn-secondary btn-sm dropdown-toggle bg-light text-secondary border-light"
+                type="button"
+                data-bs-toggle="dropdown"
+                data-bs-target="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                placeholder="Membership Tier"
+              >
+                Choose Membership Tier
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" data-value="Standard"
+                    >Standard</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-value="Premium"
+                    >Premium</a
+                  >
+                </li>
+              </ul>
+            </div>
+
             <div class="input-group mb-5 d-flex justify-content-between">
               <div class="form-check">
                 <input
@@ -125,11 +153,34 @@
               </button>
             </div>
             <div class="row">
-              <small>Don't have account? <a href="#">Sign Up</a></small>
+              <small
+                >Don't have account?
+                <a href="../pages/signup.html">Sign Up</a></small
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the button and menu elements
+        var dropdownButton = document.getElementById("dropdownButton");
+        var dropdownMenuItems = document.querySelectorAll(".dropdown-item");
+
+        // Add a click event listener to each dropdown menu item
+        dropdownMenuItems.forEach(function (item) {
+          item.addEventListener("click", function () {
+            // Update the button text with the selected item's data-value
+            dropdownButton.innerText = this.getAttribute("data-value");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

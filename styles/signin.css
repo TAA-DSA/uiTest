@@ -33,4 +33,8 @@ body {
   .right-box {
     padding: 20px;
   }
+
+  select {
+    width: 300px;
+  }
 }
