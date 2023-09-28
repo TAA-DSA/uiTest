@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const loginBtn = () => {
+  window.location.href = `${location.origin}/uiTest/pages/login.html`;
   window.location.href = "../pages/login.html";
 };
 
