@@ -19,3 +19,13 @@ const loginBtn = () => {
 const signUpBtn = () => {
   window.location.href = "./pages/signup.html";
 };
+
+const submitForm = () => {
+  const form = document.getElementById("myForm");
+
+  // Reset the form
+  form.reset();
+
+  // Display an alert message
+  alert("Form submitted successfully");
+};
